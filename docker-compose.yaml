@@ -1,10 +1,10 @@
-version: "3.9"                                  ### 2021/5/3現在の最新バージョン
+version: "3.9" ### 2021/5/3現在の最新バージョン
 services:
-  <service名>:                                  ### service名。docker-compose runの際はこれを指定する
-    build: <Dockerfileがあるディレクトリ>       ### Dockfileの場所を指定。この場合はdocker-compose.yamlファイルと同階層を指定
-    image: <イメージ名>                         ### buildと一緒に使用した場合、イメージ名の指定ができる
-    volumes:                                    ### ホストとコンテナで共有するディレクトリを選ぶ。
+  <service名>:  ### service名。docker-compose runの際はこれを指定する
+    build: <Dockerfileがあるディレクトリ> ### Dockfileの場所を指定。この場合はdocker-compose.yamlファイルと同階層を指定
+    image: <イメージ名> ### buildと一緒に使用した場合、イメージ名の指定ができる
+    volumes:            ### ホストとコンテナで共有するディレクトリを選ぶ。
       - <ホスト>:<コンテナ>
-    command: <コマンド>                         ### コンテナが実行するコマンドを選択。永続させたい場合tail -f /dev/null
+    command: <コマンド>  ### コンテナが実行するコマンドを選択。永続させたい場合tail -f /dev/null
   <service名>:
-    image: <イメージ名>                         ### buildと一緒に使用しない場合、立ち上げるdocker imageを指定
+    image: <イメージ名>  ### buildと一緒に使用しない場合、立ち上げるdocker imageを指定
